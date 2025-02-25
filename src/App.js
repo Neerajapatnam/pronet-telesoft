@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./components/header";
+import Hero from "./components/hero";
+import About from "./components/about";
+import Services from "./components/services";
+import Features from "./components/features";
+import CTA from "./components/cta";
+import Footer from "./components/footer";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+const App = () => {
+  return React.createElement(
+    "div",
+    null,
+    React.createElement(Header, null),
+    React.createElement(Hero, null),
+    React.createElement(About, null),
+    React.createElement(Services, null),
+    React.createElement(Features, null),
+    React.createElement(CTA, null),
+    React.createElement(Footer, null) // 👈 Add Footer Section
   );
-}
+};
 
 export default App;
